@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products api</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+    ">
+    <style>
+        .card {
+            height: 30rem;
+        }
+
+        .card-img {
+            height: 65%;
+        }
+
+        /* .card-body {
+            height: 35%;
+        } */
+    </style>
+</head>
+
+<body class="bg-dark">
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid">
+                <a class="navbar-brand text-warning fw-bold" href="#">Products</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="menu-list-container" class="navbar-nav me-auto mb-2 mb-lg-0 text-capitalize">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" href="#" onclick="displayData()">All</a>
+                        </li>
+
+                    </ul>
+                    <div class="d-flex" role="search">
+                        <input id="search-field" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button id="search-btn" class="btn btn-light btn-outline-warning" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- no found section start -->
+    <section id="not-found" class="d-flex justify-content-center mt-5 d-none">
+        <div>
+            <img class="rounded-circle bg-light" src="img/download.jpg" alt="" height="30px" width="30px">
+            <span class="fw-bold text-warning">Not found any item</span>
+        </div>
+    </section>
+    <!-- no found section end -->
+    <div class="container-md container-fluid my-5">
+        <main>
+            <section>
+                <div id="card-container" class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="product-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="product-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modal-body" class="modal-body" style="height:45rem">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- spinner  -->
+    <div id="laoder" class="position-absolute top-50 start-50 translate-middle d-none">
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
